@@ -1,0 +1,357 @@
+/* Updated Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Smooth scrolling for a modern feel */
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* Slightly softer background color */
+    background-color: #f7f7f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from 0deg, red, yellow, blue,black);
+}
+
+/* Improved Navigation */
+#nav {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; /* Use rem for better scalability */
+    /* Subtle box shadow for lift */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Solid white background for clarity */
+    position: fixed; /* Keep navigation at the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it stays above other content */
+}
+
+#left {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+#left h4 {
+    font-size: 1rem; /* Use rem */
+    font-weight: 600; /* Slightly bolder */
+    letter-spacing: -0.5px;
+    margin-right: 1.5rem; /* Use rem */
+    color: #333; /* Darker text */
+    transition: color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+#left h4:hover {
+    color: #007bff; /* Example hover color */
+}
+
+#right {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#right button {
+    font-size: 1rem; /* Use rem */
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    padding: 0.75rem 1.5rem; /* Use rem */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Add transform to transition */
+}
+
+#right button:nth-child(1) {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-right: 0.75rem; /* Use rem */
+}
+
+#right button:nth-child(1):hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Subtle scale up on hover */
+}
+
+#right button:nth-child(2) {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+#right button:nth-child(2):hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Subtle scale up on hover */
+}
+
+#nav img {
+    height: 2.5rem; /* Control logo size with rem */
+    margin-right: 3rem; /* Use rem */
+}
+
+/* Enhanced Hero Section */
+#center {
+    height: auto; /* Adjust height based on content */
+    width: 100%;
+    padding: 12vh 0 15vh; /* Adjust top padding to account for fixed nav */
+    text-align: center;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec); /* Gentle gradient background */
+}
+
+#center h3 {
+    font-size: 1.2rem; /* Use rem */
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.6rem 1.2rem; /* Use rem */
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333;
+    margin-bottom: 1.5rem; /* Use rem */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+#center h1 {
+    font-size: 4rem; /* Use rem */
+    line-height: 4.5rem; /* Use rem */
+    font-weight: 700; /* Bolder heading */
+    color: #333;
+  
+    margin-bottom: 1rem; /* Use rem */
+    text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+}
+#center:hover h1{
+      animation: float 6s ease-in-out ;
+    transform-style: preserve-3d;
+    
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1) rotateZ(0deg);
+    }
+    20% {
+        transform: translateY(-12px) scale(1.02) rotateZ(-1deg);
+    }
+    40% {
+        transform: translateY(-18px) scale(1.03) rotateZ(1deg);
+    }
+    60% {
+        transform: translateY(-12px) scale(1.02) rotateZ(-1deg);
+    }
+    80% {
+        transform: translateY(0) scale(1) rotateZ(0deg);
+    }
+    100% {
+        transform: translateY(0) scale(1) rotateZ(0deg);
+    }
+}
+
+
+#center h4 {
+    font-size: 1.5rem; /* Use rem */
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2rem; /* Use rem */
+}
+
+#center button {
+    font-size: 1.1rem; /* Use rem */
+    font-weight: 600;
+    padding: 1rem 2.5rem; /* Use rem */
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#center button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animated Bottom Scroll Section */
+#bottom {
+    display: flex; /* Use flexbox for better control */
+    gap: 1.5rem; /* Spacing between elements */
+    height: 220px; /* Adjusted height */
+    width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; /* Enable smooth snapping */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    background-color: #fff; /* Solid background */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Subtle top shadow */
+}
+
+#bottom::-webkit-scrollbar {
+    display: none;
+}
+
+.elem {
+    flex: 0 0 auto; /* Don't grow or shrink, take up auto width */
+    width: 200px; /* Smaller, more manageable size */
+    height: 100%;
+    background-color: #ddd; /* Placeholder background */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+    transform: perspective(500px) rotateY(0deg); /* Set perspective for 3D */
+    transition: transform 0.4s ease-in-out; /* Smooth 3D transition */
+}
+
+.elem:hover {
+    transform: perspective(500px) rotateY(10deg) scale(1.05); /* Rotate slightly on hover */
+}
+
+.elem img,
+.elem video {
+    height: 70%; /* Adjust image/video height */
+    width: 100%;
+    object-fit: cover;
+    display: block; /* Prevent extra space below inline elements */
+}
+
+.text {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)); /* Darker gradient */
+    color: whitesmoke;
+    padding: 0.75rem 1rem; /* Use rem */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+}
+
+.text h5 {
+    font-size: 1rem; /* Use rem */
+    font-weight: 500;
+    margin-bottom: 0.25rem; /* Use rem */
+}
+
+.text p {
+    font-size: 0.8rem; /* Use rem */
+    color: #eee;
+    margin-top: 0;
+}
+
+/* Animated "Explore Inspiring Designs" Section */
+#page1 {
+    width: 100%;
+    padding: 5rem 2rem; /* Use rem */
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+#page1 h1 {
+    font-size: 2.5rem; /* Use rem */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem; /* Use rem */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+#ph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Spacing between photos */
+    padding: 1rem;
+}
+
+.photo {
+    height: 200px; /* Adjust height */
+    width: 250px; /* Adjust width */
+    background-color: #ccc; /* Placeholder */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); /* More noticeable shadow */
+    position: relative;
+    transform: perspective(500px) rotateX(0deg); /* Perspective for 3D */
+    transition: transform 0.4s ease-in-out;
+}
+
+.photo:hover {
+    transform: perspective(500px) rotateX(5deg) translateY(-5px) scale(1.03); /* Rotate and lift on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.photo video,
+.photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text2 {
+    height: auto; /* Adjust to content */
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)); /* Slightly less opaque */
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 0.75rem 1rem; /* Adjust padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photo:hover .text2 {
+    opacity: 1; /* Fade in on hover */
+}
+
+.text2 h5 {
+    font-size: 1rem; /* Use rem */
+    font-weight: 500;
+    margin: 0;
+}
+
+.text2 i {
+    font-size: 1.2rem; /* Adjust icon size */
+    padding: 0.4rem;
+    color: black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Basic Styling for Page 2 */
+#page2 {
+    height: 50vh; /* Example height */
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Subtle top shadow */
+}
+
+#page2 h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
